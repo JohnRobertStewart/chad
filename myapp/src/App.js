@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import './components/Nav.js'
-
+import './index.css';
+import Header from './Header.jsx'
+import Content from './Content.jsx'
+import React, {useState} from 'react';
+import Footer from './Footer.jsx';
+import Darkmode from './Darkmode.jsx';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          EYYY WELCOME TO CHADLYWICK.COM
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const [darkMode, setDarkMode] = React.useState(false);
+
+  return (    
+    <div className="App">   
+    <Darkmode />
+    <Header />
+    <Content />
+    <Footer />
+  
     </div>
+   
   );
 }
 

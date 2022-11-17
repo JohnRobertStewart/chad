@@ -1,38 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.logo {
   pointer-events: none;
+  background-image: url("./components/logo.png");
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: top;
 }
 
+.logo[darkMode] {
+  pointer-events: none;
+  background-image: url("./components/darkchad.png");
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+  position: top;
+}
+
+.header {
+  position: top;
+  display: grid;
+}
+
+.footer {
+  position: bottom;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .logo {
+   animation: logo-bounce ease infinite 10s;
+   background-image: url("./components/logo.png");
+
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark {
+    background: #333;
+    color: white;
+  }
+  .logo {
+    animation: logo-bounce ease infinite 10s;
+    background-image: url("./components/darkchad.png");
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .day.light-scheme {
+    background: white;
+    color: #555;
+    background-image: url("./components/logo.png");   
+  }
+  .logo {
+  animation: logo-bounce ease infinite 10s;
+  background-image: url("./components/logo.png");
+
+      
+    }
+  
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes logo-bounce {
+  0% {
+     transform: translateY(100%);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(50%); 
+  }
+  100%{
+  transform: translateY(100%);
   }
 }
