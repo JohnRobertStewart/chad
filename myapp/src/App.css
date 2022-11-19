@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 .App {
   text-align: center;
 }
@@ -17,7 +20,7 @@
 
 .logo[darkMode] {
   pointer-events: none;
-  background-image: url("./components/darkchad.png");
+  background-image: url("./components/dark-chad.png");
   background-repeat: no-repeat;
   -moz-background-size: cover;
   background-size: cover;
@@ -30,7 +33,10 @@
 }
 
 .footer {
-  position: bottom;
+  position: middle;
+  display: grid;
+  font: 'Bubble Frum 3D Demo';
+  position: middle, fixed;
 }
 
 
@@ -44,19 +50,19 @@
 
 @media (prefers-color-scheme: dark) {
   .dark {
-    background: #333;
+    background: rgb(0, 0, 0);
     color: white;
   }
   .logo {
     animation: logo-bounce ease infinite 10s;
-    background-image: url("./components/darkchad.png");
+    background-image: url("./components/dark-chad.png");
   }
 }
 
 @media (prefers-color-scheme: light) {
   .day.light-scheme {
     background: white;
-    color: #555;
+    color: rgb(0, 0, 0);
     background-image: url("./components/logo.png");   
   }
   .logo {
@@ -68,13 +74,12 @@
   
 }
 
-.App-header {
-  background-color: #282c34;
+@font-face {
+  font-family: "Bubble";
+  src: local('Bubble'), url("./components/bubble.ttf") format('truetype');
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes logo-bounce {
   0% {

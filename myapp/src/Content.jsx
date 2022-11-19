@@ -1,18 +1,19 @@
-import React, { useEffect, useState, useMedia } from 'react';
+import React from 'react';
+import "./App.css";
 
 
 
-const Content = () => {
-  
+
+const Content = () => { 
 return (
 
-<content className = 'content'> 
+<div className = 'content'> 
 
  
 <p>
 EYYY WELCOME TO CHADLYWICK.COM
 </p>
-    </content>
+    </div>
   )
 }
 

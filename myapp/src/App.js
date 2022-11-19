@@ -1,12 +1,11 @@
-import './App.css';
-import './index.css';
-import Header from './Header.jsx'
-import Content from './Content.jsx'
-import React, {useState} from 'react';
+import React from 'react';
+import Header from './Header.jsx';
+import Content from './Content.jsx';
 import Footer from './Footer.jsx';
 import Darkmode from './Darkmode.jsx';
+import './App.css';
+
 function App() {
-const [darkMode, setDarkMode] = React.useState(false);
 
   return (    
     <div className="App">   

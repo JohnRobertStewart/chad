@@ -1,31 +1,33 @@
-import React, { useEffect, useState, useMedia } from 'react';
-import darkchad from './components/darkchad.png';
+import React, { useState, useEffect } from 'react';
+import darkchad from './components/dark-chad.png';
 import logo from './components/logo.png';
+import "./App.css";
 
-const useLocalStorage = typeof window !== 'undefined' ? localStorage.getItem('checkout') : null
+
+//const useLocalStorage = typeof window !== 'undefined' ? localStorage.getItem('checkout') : null
 
 const Darkmode = () => {
-const [darkMode, setDarkMode] = React.useState(false);
+const [darkMode, setDarkMode] = useState(false);
 
-React.useEffect(() => {
+useEffect(() => {
     if (darkMode) {
         document.body.classList.add("dark");
-        <img class="logo" src={logo}/>
+        <img className="logo" src={+logo} alt="chad art"/>
     }else{
-        document.body.classList.remove("dark");
-        <img class="logo" src={darkchad}/>
+       document.body.classList.remove("dark");
+        <img className="logo" src={+darkchad} alt="chad art"/>
     }
     }, [darkMode]);
 
 return (
 
-<div id = 'darkmode'>
+<div className = 'darkmode'>
 ASDASDASDSAD
 <button onClick={() => setDarkMode(!darkMode)}{...console.log(darkMode)}> Dark mode</button>
 { (darkMode) ?
-     <img class="logo" src={darkchad}/>
+     <img className="logo" src={darkchad} alt="chad art"/>
     :
-    <img class="logo" src={logo}/>
+    <img className="logo" src={logo} alt="chad art"/>
     }  
 </div>
   );
