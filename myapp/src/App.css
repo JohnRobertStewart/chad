@@ -39,6 +39,15 @@
   position: middle, fixed;
 }
 
+.foo{
+  background-image: url("./components/theme.png");
+  background-size: small;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+  position: top;
+
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .logo {
@@ -67,7 +76,7 @@
   }
   .logo {
   animation: logo-bounce ease infinite 10s;
-  background-image: url("./components/logo.png");
+  src: url("./components/logo.png");
 
       
     }
