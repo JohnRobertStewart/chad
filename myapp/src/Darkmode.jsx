@@ -1,55 +1,38 @@
 import React, { useState, useEffect } from 'react';
-import darkchad from './components/dark-chad.png';
-import logo from './components/logo.png';
-import theme from './components/theme.png';
-import themelight from './components/themelight.png';
-
 
 import "./App.css";
 
-
-
 //const useLocalStorage = typeof window !== 'undefined' ? localStorage.getItem('checkout') : null
-
-
 const Darkmode = () => {
 const [darkMode, setDarkMode] = useState(false);
 
-
-
 useEffect(() => {
     if (darkMode) {
+        document.body.classList.remove("light");
         document.body.classList.add("dark");
-        <img className="logo" src={+logo} alt="chad art"/>;       
-        <button className="foo" src={+theme} alt="button art"/>; 
+        console.log("darkmodework");   
+        console.log(document.body.classList);             
+          
     }else{
        document.body.classList.remove("dark");
-       <img className="logo" src={+darkchad} alt="chad art"/>;      
-       <button className="foo" src={+themelight} alt="button art"/>; 
-  
+       document.body.classList.add("light");
+       console.log("darkmodeworklight");
+       console.log(document.body.classList);          
         }           
-    }, [darkMode, ]);
+    }, [darkMode]);
 
 return (
-
-<div className = 'darkmode'>
-<button type="image" src={theme} alt="dark mode button" className="foo" height={25} width={25}
- onClick={() => 
-    {
- setDarkMode(!darkMode)  
-
-}
- }
-
->_________</button>
-{ (darkMode) ?
-    <img className="logo" src={darkchad} alt="chad art"/>    
-    :
-    <img className="logo" src={logo} alt="chad art"/>
-    }  
+<div className = "darkmode">
+    <div>
+<img className ="darkbutton" src = {`${darkMode ? require('./components/themelight.png') : require('./components/theme.png')}`} onClick={()=>setDarkMode(!darkMode)} alt="dark mode button" height={25} width={25}></img>
+    </div>
+    <div>
+<img className="logo" src={`${darkMode ? require('./components/dark-chad.png') : require('./components/logo.png')}`}  alt="chad art"></img>
+    </div>
 </div>
 
   );
 };
 
 export default Darkmode;
+
