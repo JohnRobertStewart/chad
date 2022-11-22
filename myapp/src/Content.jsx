@@ -5,6 +5,8 @@ import "./App.css";
 
 
 const Content = () => { 
+  console.log("hi");
+
 return (
 
 <div className = 'content'> 
