@@ -13,7 +13,7 @@ return (
 
  
 <p>
-BEEP BOOP an whaddify do dis
+BEEP BOOP
 </p>
     </div>
   )
