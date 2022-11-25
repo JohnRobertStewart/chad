@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import "./App.css";
 
 const Darkmode = () => {
-//const useLocalStorage = typeof window !== 'undefined' ? localStorage.getItem(darkMode) : null;
 const [darkMode, setDarkMode] = useState(false);
 console.log("hi2");
 
@@ -19,7 +18,6 @@ useEffect(() => {
   }, []);
 
 useEffect(() => {
-    //const darkMode = JSON.parse(localStorage.getItem(darkMode))
     if (darkMode) {
         document.body.classList.remove("light");
         document.body.classList.add("dark");

@@ -32,6 +32,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .logo {
    animation: logo-bounce ease infinite 10s;
+   
   }
 }
 
@@ -40,14 +41,30 @@
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
   }
+  .logo {
+    src: url("./components/dark-chad.png")
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .light {
     background: rgb(248, 248, 248);
     color: rgb(1, 1, 8);
+    src: url("./components/logo.png")
+
   }  
 }
+
+@media (prefers-color-scheme: no-preference) {
+  .light {
+    background: rgb(248, 248, 248);
+    color: rgb(1, 1, 8);
+    src: url("./components/logo.png")
+
+  }  
+}
+
+
 
 @font-face {
   font-family: "Bubble";
