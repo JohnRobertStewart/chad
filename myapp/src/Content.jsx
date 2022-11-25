@@ -13,7 +13,7 @@ return (
 
  
 <p>
-EYYY WELCOME TO CHADLYWICK.COM
+BEEP BOOP
 </p>
     </div>
   )
