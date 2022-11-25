@@ -38,7 +38,7 @@
 @media (prefers-color-scheme: dark) {
   .dark {
     background: rgb(0, 0, 0);
-    color: rgb(123, 107, 180);
+    color: rgb(117, 117, 117);
   }
 }
 
@@ -52,7 +52,6 @@
 @font-face {
   font-family: "Bubble";
   src: local('Bubble'), url("./components/bubble.ttf") format('truetype');
-
 }
 
 
