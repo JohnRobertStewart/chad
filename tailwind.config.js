@@ -10,6 +10,12 @@ module.exports = {
     ],
 },
   theme: {
+    backgroundSize: ({ theme }) => ({
+      auto: 'auto',
+      cover: 'cover',
+      contain: 'contain',
+      ...theme('spacing')
+    }),
     extend: {   
       fontFamily: {
       bubble: ["Bubble"],
